@@ -64,7 +64,7 @@ namespace ExportExcel.Controllers
                 file = new FileInfo(Path.Combine(webRoot, fileName));
             }
 
-            using (var package = new ExcelPackage(file))
+            using (var package = new ExcelPackage())
             {
                 var worksheet = package.Workbook.Worksheets.Add("test");
 
@@ -77,10 +77,19 @@ namespace ExportExcel.Controllers
                 worksheet.Cells["A3"].Value = 1001;
                 worksheet.Cells["B3"].Value = "BBB";
 
-                package.Save();
+                return CreateFile(fileName, package);
+
+                //package.Save();
             }
 
-            return DownloadFile(webRoot, fileName);
+            //return DownloadFile(webRoot, fileName);
+        }
+
+        private IActionResult CreateFile(string fileName, ExcelPackage package)
+        {
+            var stream = new MemoryStream(package.GetAsByteArray());
+
+            return File(stream.ToArray(), "application/vnd.ms-excel", fileName);
         }
 
         public FileResult DownloadFile(string filePath, string filename)
@@ -89,7 +98,6 @@ namespace ExportExcel.Controllers
             var fileInfo = provider.GetFileInfo(filename);
             var readStream = fileInfo.CreateReadStream();
             var mimeType = "application/vnd.ms-excel";
-
             //var test = new FileContentResult();
             return File(readStream, mimeType, filename);
         }
