@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  exportexcel:
+    image: ${DOCKER_REGISTRY}exportexcel
+    build:
+      context: .
+      dockerfile: ExportExcel/Dockerfile

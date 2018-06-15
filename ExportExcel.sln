@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportExcel", "ExportExcel\ExportExcel.csproj", "{4956543D-1AF9-4BD6-B45D-00BD6894C7A7}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{93157F15-7BA1-408B-B2B2-3F99356ED6E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4956543D-1AF9-4BD6-B45D-00BD6894C7A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4956543D-1AF9-4BD6-B45D-00BD6894C7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4956543D-1AF9-4BD6-B45D-00BD6894C7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4956543D-1AF9-4BD6-B45D-00BD6894C7A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93157F15-7BA1-408B-B2B2-3F99356ED6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93157F15-7BA1-408B-B2B2-3F99356ED6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93157F15-7BA1-408B-B2B2-3F99356ED6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93157F15-7BA1-408B-B2B2-3F99356ED6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB6ECA11-7F69-48FD-8C1A-EE2F6BEE6B12}
+	EndGlobalSection
+EndGlobal
